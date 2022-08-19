@@ -1,5 +1,5 @@
 :root{
-    --bg-color:#FEFFE6;
+    --bg-color:/*#FEFFE6#CCCCE4#D4E4EB*/#E2F2EB  ;
     --typewriterspeed:3500ms;
     --typewriterchar:16;
 }
@@ -12,6 +12,8 @@ body{
     background-color: var(--bg-color);
     margin-left: 10%;
     margin-right: 7%;
+
+    font-family: 'Roboto Mono', monospace;
 }
 .navbar-container{
     display: flex;
@@ -26,6 +28,7 @@ body{
 }
 .nav-option a{
     text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
     color:#2F426C;
 }
 .nav-option a:hover{
@@ -35,8 +38,9 @@ body{
     margin-top: clamp(40px,10%,220px);
     font-size: 40px;
     width: max-content;
-    font-family: 'Open Sans', sans-serif;;
+    font-family: 'Source Sans Pro', sans-serif;
     position: relative;
+    color:#878B9C;
     letter-spacing: 5px;
 }
 .display-name::before,
@@ -76,6 +80,9 @@ body{
     margin-bottom: 10px;
     width: 90%;
 }
+.intro a{
+    font-family: 'Roboto Mono', monospace;
+}
 
 
 .terminal{
@@ -84,6 +91,7 @@ body{
     height: fit-content;
     width: 90%;
     overflow-wrap: break-word;
+    font-family: sans-serif;
 }
 .terminal-intro-container{
     padding-bottom: 20px;
@@ -135,6 +143,8 @@ body{
     font-size: 30px;
     display: flex;
     justify-content: center;
+    font-family: 'Source Sans Pro', sans-serif;
+
 }
 .underline{
     width: 150px;
@@ -158,6 +168,8 @@ body{
     font-size: 32px;
     margin-bottom: 20px;
     margin:20px 0;
+    font-family: 'Source Sans Pro', sans-serif;
+
 }
 .project-language{
     width: 100%;
@@ -207,6 +219,9 @@ body{
 }
 #contact p{
     font-size: 22px;
+}
+.contact p a{
+    font-family: 'Roboto Mono', monospace;
 
 }
 .contact-list{

@@ -1,0 +1,110 @@
+ <span class="nav-option"><a href="/" >Home</a></span>
+<span class="nav-option"><a href="/blog/blogpage.html" >Blog</a></span> 
+<span class="nav-option" id="last-nav"><a href="/#contact">Contacts</a></span>
+<style>
+  :root{
+        --bg-color:/*#FEFFE6#CCCCE4#D4E4EB#E2F2EB*/#ACC7B4  ;
+        --color-neon:/*hsl(317,100%,54%)*/#8f00f1;
+  }
+body{
+    margin-left: 10%;
+    margin-right: 7%; 
+    font-family: 'Roboto Mono', monospace;
+}
+ .navbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 30px;
+    margin-top: 50px;
+    font-size: 26px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid black;
+    z-index:20;
+} 
+#last-nav{
+  margin-right: 0;
+}
+.nav-option{
+    margin-right: /*clamp(40px,5em,10%)*/3em;;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.nav-option:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: var(--color-neon);
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.nav-option:hover:before, .nav-option:focus:before, .nav-option:active:before {
+  left: 0;
+  right: 0;
+}
+
+.nav-option a{
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    color:#2F426C;
+}
+.nav-option a:hover{
+    color:black;
+}
+@media screen and (max-width:350px)  {
+    /* body{
+        margin-left: 10vw;
+        margin-right: 10vw;
+        overflow-x: hidden;
+    }
+    main{
+    } */
+    .navbar-container{
+      display: flex;
+      justify-content: center;
+        margin:30px 0px;
+        font-size: 15px;
+    }
+    
+
+    .last-nav{
+      margin-right: 0;
+    }
+    .nav-option{
+        margin-right: 15px;
+    }
+}
+@media screen and (min-width:350px) and (max-width:728px) {
+    /* body{
+        overflow-x: hidden;
+        margin-left: 10%;
+        margin-right: 3%;
+    } */
+    .navbar-container{
+        display: flex;
+        justify-content: center;
+        margin:50px 0px;
+        width: auto;
+    }
+    #last-nav{
+      margin-right: 0px;
+    }
+    .nav-option{
+        margin-right: 10%;
+        font-size: 18px;
+    }
+}
+</style>

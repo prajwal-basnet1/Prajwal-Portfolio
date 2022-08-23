@@ -1,5 +1,5 @@
 :root{
-    --bg-color:/*#FEFFE6#CCCCE4#D4E4EB#E2F2EB*/#C5CEDD  ;
+    --bg-color:/*#FEFFE6#CCCCE4#D4E4EB#E2F2EB*/#ACC7B4  ;
     --typewriterspeed:3500ms;
     --typewriterchar:16;
     --color-neon:/*hsl(317,100%,54%)*/#8f00f1;
@@ -16,16 +16,18 @@ body{
     margin-right: 7%; 
     font-family: 'Roboto Mono', monospace;
 }
-.navbar-container{
+ .navbar-container{
     display: flex;
     flex-direction: row;
     justify-content: end;
     margin-right: 30px;
     margin-top: 50px;
     font-size: 26px;
-}
+    padding-bottom: 15px;
+    border-bottom: 2px solid black;
+} 
 .nav-option{
-    margin-right: /*clamp(40px,5em,10%)*/5em;;
+    margin-right: 3em;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -33,6 +35,9 @@ body{
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
+}
+.last-option{
+    margin-right: 0;
 }
 .nav-option:before {
   content: "";
@@ -62,6 +67,9 @@ body{
 }
 .nav-option a:hover{
     color:black;
+} 
+#last-option{
+    margin-right: 0;
 }
 .display-name-container{
     margin-top: clamp(40px,10%,220px);
@@ -117,9 +125,9 @@ body{
 
 .terminal{
     background-color:#263244 ;
-    margin-top: 150px;
+    margin-top: 120px;
     height: fit-content;
-    width: 90%;
+    width: 100%;
     overflow-wrap: break-word;
     font-family: sans-serif;
 }
@@ -210,7 +218,7 @@ body{
 }
 .project-language{
     width: 100%;
-    margin:60px 0px;
+    margin-top:30px;
     display: flex;
     flex-wrap: wrap;
     overflow-wrap: break-word;
@@ -308,22 +316,24 @@ body{
 
 /*For Extra Small Devices*/
 @media screen and (max-width:350px)  {
-    body{
-        /* margin-left: 10%; */
+    /* body{
+         margin-left: 10%; 
         margin:0px 0px;
         overflow-x: hidden;
-    }
+    } */
     main{
         margin-left: 3%;
         margin-right: 3%;
     }
-    .navbar-container{
+     .navbar-container{
         margin:30px 0px;
-        margin-right: 20%;
-        font-size: 20px;
+        font-size: 18px;
     }
     .nav-option{
         margin-right: 15px;
+    } 
+    #last-option{
+        margin-right: 0;
     }
     .display-name {
         font-size:20px;
@@ -362,23 +372,26 @@ body{
 }
 /*For Modern Mobile Devices*/
 @media screen and (min-width:350px) and (max-width:728px) {
-    body{
+    /* body{
         overflow-x: hidden;
         margin:0px 0px;
-    }
+    } */
     main{
         margin-left: 3%;
         margin-right: 3%;
     }
-    .navbar-container{
+     .navbar-container{
         display: flex;
         justify-content: center;
         margin:50px 0px;
         width: auto;
     }
     .nav-option{
-        margin-right: 12%;
         font-size: 20px;
+        margin-right: 25px;
+    } 
+    #last-option{
+        margin-right: 0;
     }
     .display-name{
         font-size: 22px;
@@ -394,18 +407,17 @@ body{
         font-size: 30px;
     }
     .terminal{
-        width: 90%;
+        width: 100%;
     }
     .intro-terminal{
         width: 100%;
-        margin-right: 20px;
     }
     .project-image{
         height: 200px;
     }
      #project-container{
         display: grid;
-        grid-template-columns: repeat(2);
+        grid-template-columns: 1fr;
         padding-right: 20px;
         width: 90%;
     } 

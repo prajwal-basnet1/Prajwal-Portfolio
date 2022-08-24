@@ -125,9 +125,11 @@ body{
 
 .terminal{
     background-color:#263244 ;
-    margin-top: 120px;
+    margin-top: 50px;
     height: fit-content;
-    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     overflow-wrap: break-word;
     font-family: sans-serif;
 }
@@ -165,7 +167,7 @@ body{
     color: white;
     margin-left: 30px;
     margin-top: 20px;
-    font-size: 22px;
+    font-size: 20px;
 }
 .intro-ans{
     color:  #e7d184;
@@ -177,7 +179,7 @@ body{
     color: lawngreen;
 }
 .project-intro {
-    margin-top: 5em;
+    margin-top: 50px;
     font-size: 30px;
     display: flex;
     justify-content: center;
@@ -226,7 +228,7 @@ body{
 .language-option{
     border: 3px solid var(--color-neon);
     width: fit-content;
-    font-size: 1em;
+    font-size: 20px;
     padding: 5px 10px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -254,7 +256,7 @@ body{
 
 }
 .project-des{
-    font-size: 22px;
+    font-size: 20px;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -276,7 +278,7 @@ body{
 }
 .my-introduction{
     margin-left: 10%;
-    font-size: 22px; 
+    font-size: 20px; 
     margin-right: 10%;
 }
 /*use media query for below 1200 width*/
@@ -286,7 +288,7 @@ body{
     align-items: center;
 }
 #contact p{
-    font-size: 22px;
+    font-size: 20px;
 }
 .contact p a{
     font-family: 'Roboto Mono', monospace;
@@ -338,14 +340,28 @@ body{
     .display-name {
         font-size:20px;
     }
-    .intro p{
-        font-size: 14px;
+    .intro {
+        font-size: 18px;
+    }
+    .terminal{
+        margin-top: 40px;
     }
     .terminal-intro-container span,p{
+        
         font-size: 14px;
+    }
+    .project-intro{
+        margin-top: 40px;
     }
     .project-intro p{
         font-size: 20px;
+    }
+    .project-heading{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .language-option{
+        font-size: 12px;
     }
 
     #project-container{
@@ -379,12 +395,19 @@ body{
     main{
         margin-left: 3%;
         margin-right: 3%;
+        /* font-size: 16px; */
     }
      .navbar-container{
         display: flex;
         justify-content: center;
         margin:50px 0px;
         width: auto;
+    }
+    .intro{
+        font-size: 20px;
+    }
+    .language-option{
+        font-size: 14px;
     }
     .nav-option{
         font-size: 20px;
@@ -394,8 +417,12 @@ body{
         margin-right: 0;
     }
     .display-name{
-        font-size: 22px;
+        font-size: 24px;
         margin-left: 40px;
+    }
+    .project-heading{
+        font-size: 20px;
+        font-weight: 600;
     }
     .intro p{
         margin-left: 40px;
@@ -408,9 +435,12 @@ body{
     }
     .terminal{
         width: 100%;
+        margin-top: 60px;
+
     }
     .intro-terminal{
         width: 100%;
+        font-size: 16px;
     }
     .project-image{
         height: 200px;

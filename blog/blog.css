@@ -1,4 +1,10 @@
-.heading{
+:root{
+        --color-neon:
+                /*hsl(317,100%,54%)*/
+                #8f00f1;
+}
+
+.blog-content,.read-next{
     max-width: 800px;
     margin:auto;
     word-wrap: break-word;

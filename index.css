@@ -177,6 +177,7 @@ body{
     color:  #e7d184;
     margin-top: 5px;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 .intro-title{
     display: inline-block;
@@ -230,7 +231,7 @@ body{
     flex-wrap: wrap;
     overflow-wrap: break-word;
 }
-.project-image{
+/* .project-image{
     -webkit-filter: brightness(65%);
 -webkit-transition: all 1s ease;
 -moz-transition: all 1s ease;
@@ -238,8 +239,13 @@ body{
 -ms-transition: all 1s ease;
 transition: all 1s ease;
 }
-.project-image:hover{
+.projects-image:hover{
 -webkit-filter: brightness(100%);
+} */
+.projects:hover{
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
 box-shadow:
 1px 1px  rgba(182,199,226,0.65),
 2px 2px  rgba(182,199,226,0.65),

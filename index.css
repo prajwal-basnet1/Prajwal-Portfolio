@@ -379,10 +379,10 @@ transition: .5s ease;
     }
      .navbar-container{
         margin:30px 0px;
-        font-size: 18px;
     }
     .nav-option{
         margin-right: 15px;
+        font-size: 13px;
     } 
     #last-option{
         margin-right: 0;

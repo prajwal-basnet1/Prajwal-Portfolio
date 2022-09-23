@@ -3,14 +3,23 @@
     --typewriterspeed:2000ms;
     --typewriterchar:16;
     --color-neon:/*hsl(317,100%,54%)*/#8f00f1;
-    --font-content:'Cardo', serif;
-    --font-head:'Oswald', sans-serif;
-    
+    --font-content:avenir,'Cardo', serif;
+    --font-head:tiempos,'Oswald', sans-serif;
+    --text-heading:#333333;
+    --text:#222; 
     --linar-gradient:linear-gradient(to right,#EAE5C9,#6CC6CB);
 }
 *{
     margin:0px;
     padding: 0px;
+}
+@font-face {
+    font-family: avenir;
+    src: url(./fonts/AvenirLTStd-Book.otf);
+}
+@font-face {
+    font-family: tiempos;
+    src: url(./fonts/TiemposHeadline-Regular.otf);
 }
 body{
     /*background-color: var(--bg-color);
@@ -19,6 +28,7 @@ body{
     margin-left: 10%;
     margin-right: 7%; 
     font-family: var(--font-content);
+    color:var(--text)
 }
  .navbar-container{
     display: flex;
@@ -68,7 +78,8 @@ body{
     text-decoration: none;
     font-family: var(--font-head);
     text-transform: uppercase;
-    color: black;
+    color: var(--text-heading);
+    letter-spacing: 0.05em;
 }
 .nav-option a:hover{
     color:black;
@@ -96,7 +107,7 @@ body{
     left: 0;
 }
 .display-name::before{
-    background-color: /*var(--bg-color)*/#E9F3F6;
+    background-color: /*var(--bg-color)*/#E5F0F5;
     animation: hide var(--typewriterspeed) steps(var(--typewriterchar)) 1s forwards;
 }
 .display-name::after{
@@ -173,11 +184,16 @@ body{
     margin-top: 20px;
     font-size: 20px;
 }
+.intro-terminal:last-child p{
+margin-top: 10px;
+}
 .intro-ans{
     color:  #e7d184;
     margin-top: 5px;
     margin-bottom: 20px;
     text-decoration: none;
+    margin-right: 10px;
+    margin-top:4px;
 }
 .intro-title{
     display: inline-block;
@@ -190,6 +206,7 @@ body{
     justify-content: center;
     font-family: var(--font-head);
     text-transform: uppercase;
+    color:var(--text-heading)
 
 }
 .underline{
@@ -222,6 +239,7 @@ body{
     margin-bottom: 20px;
     margin:20px 0;
     font-family: var(--font-head);
+    color:var(--text-heading);
     text-transform: uppercase;
 }
 .project-language{
@@ -432,13 +450,18 @@ transition: .5s ease;
      .navbar-container{
         display: flex;
         justify-content: center;
-        margin:50px 0px;
+        margin:25px 0px;
         width: auto;
     }
     .display-name{
         font-size: 22px;
-        margin-left: 35px;
+        margin-left: 15px;
     }
+
+    .display-name::before{
+        background-color: /*var(--bg-color)*/#ECF6F8;
+        animation: hide var(--typewriterspeed) steps(var(--typewriterchar)) 1s forwards;
+}
     .intro{
         font-size: 20px;
     }
@@ -447,9 +470,10 @@ transition: .5s ease;
     }
     .nav-option{
         font-size: 15px;
-        margin-right: 25px;
+        margin-right: 15px;
         font-family:var(--font-head) ;
     } 
+    
     #last-option{
         margin-right: 0;
     }

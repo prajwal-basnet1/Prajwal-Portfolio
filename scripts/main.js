@@ -28,7 +28,7 @@ function togglequote() {
 
 
 const nav=document.querySelector(".navbar-container")
-fetch("../../header/navbar.html") //using two .. so that blog(john-wooden.html) can access you can use as much .. as you like.
+fetch("/scripts/navbar.html") //using two .. so that blog(john-wooden.html) can access you can use as much .. as you like.
 .then(res=>res.text())
 .then(data=>{
 
@@ -41,21 +41,21 @@ fetch("../../header/navbar.html") //using two .. so that blog(john-wooden.html) 
 
     if(page==="blog")
     {
-
-        let blog=doc.getElementById('blog')
-        blog.style.textDecoration='line-through'
-        blog.childNodes[0].style.color='#8f00f1'
+        let blog=doc.getElementById('inner-blog')
+        // let blog=doc.getElementById('blog')
+        blog.style.textDecoration='line-through' 
+        blog.style.color='#8f00f1'
     }
     else if(page==="resume")
     {
-        let resume=doc.getElementById('last-nav') 
+        let resume=doc.getElementById('inner-nav') 
         resume.style.textDecoration='line-through'
-        resume.childNodes[0].style.color='#8f00f1'
+        resume.style.color='#8f00f1'
     }
     else{
-        let logo=doc.getElementById('home')
+        let logo=doc.getElementById('inner-home')
         logo.style.textDecoration='line-through'
-        logo.childNodes[0].style.color='#8f00f1'
+        logo.style.color='#8f00f1'
 
     }
 

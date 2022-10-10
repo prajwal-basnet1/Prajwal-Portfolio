@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Page</title>
+</head>
+<body>
+    <header class="navbar-container">
+
+    </header>
+    <main>
+        <div class="sucess-container" style="display:flex;justify-content:center;flex-direction: column;align-items: center;margin-top:50px;">
+                <div class="subscribe">
+                    <h1 style="font-family:tiempos,serif;letter-spacing: 0.1em;">Subscription Confirmed</h1>
+                </div>
+                <div class="subscribe-message" style="font-size:18px">
+                    <p>Your subscription to our list has been confirmed!</p>
+                    <p>Thank you for subscribing!</p>
+                </div>
+                <div class="subscribe-buttons">
+                    <a href="/blog/blogpage.html"><button id="continue-button">Continue</button></a>
+                    <p>Or</p>
+                    <a href="/index.html"><button>Home</button></a>
+                </div>
+        </div>
+    </main>
+    
+    
+</body>
+<style>
+    body{
+        background-image: linear-gradient( to right ,  #E4EFF5 10%, rgba(182,199,226,1) 100.2% );
+    }
+    .subscribe-buttons{
+        display: flex;
+        flex-direction: row;
+    }
+    .subscribe-message{
+        margin-left: 20px;
+    }
+    .subscribe-buttons p{
+        padding:15px;
+        font-size:20px;
+    }
+    button{
+        padding:15px 30px;
+        margin: 15px 15px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-family: avenir, serif;
+        font-weight: 600;
+        background-color:#8f00f1 ;
+    }
+    button:hover{
+        color:white
+    }
+    @media screen and ( max-width:600px) {
+        h1{
+            font-size: 22px;
+        }
+        .subscribe-message{
+            font-size: 16px;
+        }
+        
+        button{
+            padding:15px 20px;
+            font-size: 16px;
+        }
+
+    }
+    @media screen and (max-width:350px) {
+        h1{
+            font-size: 18px;
+        }
+    }
+</style>
+<script src="/scripts/main.min.js"></script>
+</html>

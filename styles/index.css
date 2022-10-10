@@ -15,11 +15,13 @@
 }
 @font-face {
     font-family: avenir;
-    src: url(./fonts/AvenirLTStd-Book.otf);
+    src: url(/fonts/AvenirLTStd-Book.otf);
+    font-display: swap;
 }
 @font-face {
     font-family: tiempos;
-    src: url(./fonts/TiemposHeadline-Regular.otf);
+    src: url(/fonts/TiemposHeadline-Regular.otf);
+    font-display: swap;
 }
 body{
     /*background-color: var(--bg-color);

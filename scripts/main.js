@@ -1,37 +1,60 @@
+const path=window.location.pathname;
+const page=path.split("/").slice(-1).pop()
 
+if ( page==="john-wooden.html") {
+    //The code below unitl fetch will toggle quote located in john wooden blog.
+    let button=document.getElementById('togglebutton')
+    let downbutton=document.getElementById('down-button')
+    let quotes=document.getElementById('additionalquotes')
 
-let quote=document.querySelector(".more-quote")
-let button=document.querySelector(".read-more")
-
-let ishide=true;
-try{
-quote.style.display="none"
-}
-catch(e){
-    console.log("Dom not found use multiple js")
-}
-function togglequote() {
-
-
-        if(ishide===true) {
-            quote.style.display="block"
-            ishide=false;
-            button.innerHTML="Show Less..."
+    button.addEventListener("click",(event)=>{
+        if(quotes.style.display==="none") {
+            quotes.style.display="block"
+            button.style.display="none"
+            downbutton.style.display="block"
         }
-        else{
-            quote.style.display="none"
-            ishide=true;
-        }
+    })
 
+    downbutton.addEventListener("click",(event)=>{
+        quotes.style.display="none"
+        downbutton.style.display="none"
+        button.style.display="block"
+    })
+
+    //The code below will show READ THIS NEXT for john wooden blog.
+
+    fetch("/scripts/readmore.min.html")
+    .then(res=>res.text())
+    .then(data=>{
+        let parser=new DOMParser()
+        let doc=parser.parseFromString(data,"text/html")
+        let content=doc.getElementById("read-more")
+        content.children[0].style.display="none"
+
+        const container=document.getElementById('next-read').appendChild(content)
+    })
+}
+
+if ( page==="ntc.html") {
+    //The code below will show READ THIS NEXT for Ntc analysis blog.
+    fetch("/scripts/readmore.min.html")
+    .then(res=>res.text())
+    .then(data=>{
+        let parser=new DOMParser()
+        let doc=parser.parseFromString(data,"text/html")
+        let content=doc.getElementById("read-more")
+        content.children[1].style.display="none"
+        const container=document.getElementById('next-read').appendChild(content)
+    })
 }
 
 
+//The code below is used for navbar.
 
 const nav=document.querySelector(".navbar-container")
-fetch("/scripts/navbar.html") //using two .. so that blog(john-wooden.html) can access you can use as much .. as you like.
+fetch("/scripts/navbar.min.html") 
 .then(res=>res.text())
 .then(data=>{
-
 
     let parser= new DOMParser();
     let doc= parser.parseFromString(data,"text/html")

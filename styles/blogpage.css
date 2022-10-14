@@ -7,7 +7,7 @@ body{
     height: fit-content;
 }
 main{
-    font-family: 'Cardo', serif;;
+    /* font-family: 'Cardo', serif;; */
     display: grid;
     place-items: center;
     /* height: 100vh; */
@@ -168,7 +168,7 @@ img {
     max-width: 100%;
     display: block;
     object-fit: cover;
-    height: 30vh;
+    height: 25vh;
 }
 .card {
     display: flex;
@@ -203,7 +203,7 @@ img {
 }
 
 .content{
-    min-height: 175px;
+    height: 175px;
 }
 
 .content h4 {
@@ -213,22 +213,63 @@ img {
     font-family: tiempos, serif;
 
 }
+.card:hover{
+    -moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+box-shadow:
+1px 1px  rgba(182,199,226,0.65),
+2px 2px  rgba(182,199,226,0.65),
+3px 3px  rgba(182,199,226,0.65),
+4px 4px  rgba(182,199,226,0.65),
+5px 5px  rgba(182,199,226,0.65),
+6px 6px  rgba(182,199,226,0.65);
+-webkit-transform: translateX(-3px);
+transform: translate(-5px, -8px);
+transition: .5s ease;
+}
 .content p{
     margin-top:5px;
-    font-size: 22px ;
+    font-size: 20px ;
+     /* white-space: nowrap;  */
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
 } 
 @media screen and (max-width:380px) {
+    img{
+        height: 25vh;
+    }
     .card{
         width: 80vw;
+    }
+    .content{
+        height: 140px;
+    }
+    .content p{
+        font-size: 16px;
+    }
+    .content h4 {
+        font-size: 1.2em;
     }
 }
 @media screen and (min-width:380px) and (max-width:856px) {
     img{
         width: 100%;
         object-fit: cover;
-        height: 30vh;
+        height: 25vh;
+    }
+    .content{
+        height: 140px;
+    }
+    .content h4 {
+        font-size: 1.3em;
     }
     .card{
         width: 80vw;
+    }
+    .content p{
+        font-size: 18px;
     }
 }

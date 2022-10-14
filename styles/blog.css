@@ -131,7 +131,8 @@ h1{
 
 #mce-EMAIL{
     width:400px;
-    padding:15px 10px;
+    padding:15px 20px;
+    padding-right: 25px;
     position: absolute;
     left: 40%;
     transform: translateX(-50%);
@@ -166,6 +167,9 @@ h2{
     margin-top: -2.5em;
 } */
 @media screen and (max-width:380px) {
+    h1{
+        font-size: 24px;
+    }
     #mce-EMAIL{
         width:180px;
         position: absolute;
@@ -191,6 +195,9 @@ h2{
         left:40%;
         font-size:18px;
         padding:15px 10px;
+    }
+    h1{
+        font-size:26px ;
     }
     h2{
         font-size: 20px;

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vim Essential Commands</title>
+    <link rel="stylesheet" href="/styles/blog.min.css">
+    <style>li{list-style: none;
+
+                }
+            code{
+                color:#666;
+            }
+            li{
+                padding-bottom: 25px;
+            }
+            .code-background{
+                border-left: 9px solid #8f00f1;;
+                background-color: #EFEFEF;
+                /* background-color: #5A5D7A; */
+                /* background-color: #EEEEEE; */
+                padding-left: 15px;
+                padding-top: 25px;
+            }
+            #begginer-section{
+                padding-bottom: 10px;
+                border-bottom: 1px solid grey;
+            }
+            #intermediate-section{
+                padding-bottom: 10px;
+                border-bottom: 1px solid grey;
+            }
+            #user-section{
+                color:#8f00f1;
+            }
+    
+    </style>
+</head>
+<body>
+        <header class="navbar-container">
+
+    </header>
+    <main>
+        <div class="blog-content">
+            
+            <div class="blog-intro">
+                    <h1>Vim Essential Commands</h1>
+                    <p style="font-family:avenir, serif">Basic And Intermediate Commands Every Linux User Must Know.</p>
+                    <p class="title-des">By <span>Prajwal Basnet</span> &nbsp;|&nbsp; Oct 13 2022 &nbsp;|&nbsp; X minute read</p>
+                    <img src="/blog/vim/vim_images/vim_image.jpeg" loading="lazy" class="cover-img" height="100px" alt="vim logo">
+                </div>
+        <div class="content">
+                <h2>Introduction</h2>
+                <p>Vim a.k.a VI is one of the most popular text editor which was intially designed for unix but now due to its easy to use feature and rising popularity - it is avilable in most operating systems. The puropse of writing this article is to highlight essential vim commands  ( Bookmark this site for easy reference later ) for your everyday needs.</p>
+                <p>I have written this article     by considering the knowlege of the reader. If you have zero knowledge of vim then you can dive in from start but if you consider yourself intermediate vim user - who has basic knowledge of navigation, editing and modes - also if you forgot commands from time to time then you can dive from the intermediate section of this article .</p>
+                <ul id="user-section">
+                <li><a href="#begginer-section" style="text-decoration:none"><strong>- begginer section</strong></a></li>
+                <li><a href="#intermediate-section" style="text-decoration:none"><strong>- intermediate section</strong></li></a>
+                </ul>
+            <h1 id="begginer-section">Begginer Section</h1>
+            <p><strong>Vim modes</strong></p>
+            <p>To make your life easier, vim has three modes - Command/Normal, Insert and visual mode.</p>
+            <p>Command mode is the default mode that you will encounter once you open vim ( Keyword don&#39;t work as you expected but don&#39;t panic). In this mode, you can execute commands like undo and redo, find and replace, save and quit etc. you will be doing most of your editing work from this mode.</p>
+            <p>Insert mode is the mode that allows you to enter text. You can enter this mode by pressing <code>i</code> . Again, to enter Command mode press <code>esc</code> - from  where you can save or quit file. you will only use this mode for writing. </p>
+            <p>Visual mode is similar to select items by clicking and dragging mouse but with keyboard. It is mostly used when copying or deleting a large number of lines. The below commands assist  you in most cases, so you don&#39;t have to remember all the things.</p>
+            <ul class="code-background">
+            <li><code>shift + v - to visualize whole line (then you can move up and down).</code></li>
+            <li><code>ctrl + v - to visualize a letter.</code></li>
+            <li><code>Esc - to exit visual mode.</code></li>
+            <li><code>v - to enter visual mode (you can use ctrl + v instead of this most of the time).</code></li>
+            </ul>
+            <p><em>In a nutsell, Esc to enter command mode, i to enter insert mode and v to enter visual mode.</em></p>
+            <p><strong>Installation</strong></p>
+            <p>One of the biggest advantage of using vim is - it is installed by default in most of the linux or unix operating system. Even if it is not installed by default, you can easily get from your operating system package manager like :</p>
+            <p>For debain based O.S:</p>
+            <ul class="code-background">
+            <li><code>sudo apt-get install vim</code> </li>
+            </ul>
+            <p>For CentOs/Fedora:</p>
+            <ul class="code-background">
+            <li><code>sudo yum install vim</code></li>
+            </ul>
+            <p><em>if you want to install vim in vscode, simply install it from extension market (I prefer to download vim extension uploaded by vscodevim).</em></p>
+            <p><strong>To open a file in vim</strong></p>
+            <ul class="code-background"><li><code>Vim filename</code></li></ul>
+            <p><strong>Working with Files</strong></p>
+            <p>All these commands are entered in Command mode( by pressing esc if you are in insert mode). 
+            Vim commands to work with files:</p>
+            <ul class="code-background">
+            <li><code>:w - to save current file.</code></li>
+            <li><code>:wq - to save and quit current file.</code></li>
+            <li><code>q! - to quit file without saving.</code></li>
+            <li><code>:help - to get help</code></li>
+            </ul>
+            <p><br></p>
+            <p><strong>Editing Commands</strong></p>
+            <p>The below commands are usually used with the combination of visual mode.</p>
+            <p><em>Remember y is only used to copy within vim - not in system clipboard.</em></p>
+            <ul class="code-background">
+            <li><code>yy (yank) - to copy a line</code> </li>
+            <li><code>y$ - to copy from present position of cursor to end of line.</code></li>
+            <li><code>p(paste) - to paste .</code></li>
+            <li><code>dd - to delete a line.</code></li>
+            <li><code>x - to delete single words.</code></li>
+            <li><code>&quot;+y - to copy in system clipboard</code></li>
+            <li><code>u - to undo</code></li>
+            <li><code>ctrl + r - to redo</code></li>
+            <li><code>. - repeat last action</code></li>
+            <li><code>gg - to go to top of the file.</code></li>
+            <li><code>G -to go to bttom of the file.</code></li>
+            </ul>
+            <p><strong>Combinations</strong></p>
+            <ul class="code-background">
+            <li><code>gg + shift v + G = to copy whole file.</code></li>
+            <li><code>shift v + 15(number) + k (or up arrow) + d - to delete 15 words above from cursor.</code></li>
+            <li><code>N(number) + y + j - to copy N number of  line below from cursor.</code></li>
+            </ul>
+            <p><br></p>
+            <h1 id="intermediate-section">Intermediate section</h1>
+            <p><strong>Vim  Essential Commands</strong></p>
+            <p>If you have mastered the above commands, Then welcome to the tech world. Now, you will be expected to do things in a geeky way. Till now you might have been using arrow, mouse, or  using lengthy keywords strikes to jump from one text to another, but from now you will be using below mentioned command to move from one text to another text.</p>
+            <p><em>For your easiness, there is small hump on f and j, so keep your index fingers there.</em></p>
+            <ul class="code-background">
+            <li><code>ctrl + p - to suggest word.</code></li>
+            <li><code>f + keyword - to find next keyword</code></li>
+            <li><code>g + ctrl + G  = to see word count</code></li>
+            <li><code>gqq = to Split/Format one big lines into multiple small lines.</code></li>
+            <li><code>g^ = to move to the start of the line, when one long line got into multiple lines.</code></li>
+            <li><code>shift + &gt; - to indent four lines(one tab) to right (used after visualizing texts).</code></li>
+            <li><code>shift + ~ - to change case (used after visualizing texts)</code></li>
+            </ul>
+            <p><strong>Advance Navigation</strong></p>
+            <ul class="code-background">
+            <li><code>h - move the cursor to left .</code></li>
+            <li><code>l -move the cursor to right.</code></li>
+            <li><code>k -move the cursor up.</code></li>
+            <li><code>j -move the cursor down.</code>
+            <br></li>
+            </ul>
+            <p><strong>Moving within a screen</strong></p>
+            <ul class="code-background">
+            <li><code>ctrl + y - move up without moving cursor.</code></li>
+            <li><code>ctrl + e - move down without moving cursor.</code></li>
+            <li><code>ctrl + b (back) - move cursor one page back.</code></li>
+            <li><code>ctrl + f (forrward) - move cursor one page forward.</code></li>
+            <li><code>H (high) - Put the cursor at top of screen.</code></li>
+            <li><code>M (middle) - put the cursor at middle of screen</code></li>
+            <li><code>L (low) - put the cursor at lowest point (bottom) of screen.</code></li>
+            <li><code>{ - move to start of previous paragraph.</code></li>
+            <li><code>} - move to start of next paragraph.</code></li>
+            <li><code>G* - to search current word (to reverse G#)</code>
+            <br></li>
+            </ul>
+            <p><strong>Line editing</strong></p>
+            <ul class="code-background">
+            <li><code>^ (caret) - move to beginning of line.</code></li>
+            <li><code>$ - move to end of line.</code></li>
+            <li><code>A - Directly enter insert mode from end of line.</code></li>
+            <li><code>I - to insert from beggining of line.</code></li>
+            <li><code>0 - to move at the start of line.</code>
+            <br></li>
+            </ul>
+            <p><strong>Word editing</strong></p>
+            <ul class="code-background">
+            <li><code>b (back) - put the cursor at start of previous word.</code></li>
+            <li><code>w (front) - put the cursor at start of next word.</code></li>
+            </ul>
+            <p><strong>Command line vim</strong></p>
+            <p>Commands are used to attain many functionalities of vim like to find and replace, set number of lines etc. so, it is vital to learn below commands to master vim</p>
+            <ul class="code-background">
+            <li><code>/keyword - search keyword form the file then to navigate to next word press &quot;n&quot; and to previous press &quot;N&quot; .</code></li>
+            <li><code>:set number - to set line number in file.</code></li>
+            <li><code>%s/pattern/replacement/g - to replace all patter with replacement at once (you can use regex aswell as string in pattern and replacment).</code></li>
+            <li><code>%s/pattern/replacement/gc - replace all occurance and confirms each one.</code></li>
+            <li><code>:sp filename - split screen horizantolly and to switch tabs ctrl + w + j/k.</code></li>
+            <li><code>:vsp filename - split screen vertically and to switch tabs ctrl + w +h/l.</code></li>
+            </ul>
+            <p><strong>Combos</strong></p>
+            <ul class="code-background">
+            <li><code>ctrl v + j/k(up/down) + shift I + #(comment) + Esc  comment all the line at once.</code></li>
+            <li><code>dap - delete around paragraph.</code></li>
+            <li><code>visual + ctrl a - to increment number (ctrl +x - to decrement).</code></li>
+            <li><code>gg + shift v + G + &quot;+y = to copy all the content from vim to system clipboard</code></li>
+            </ul>
+            <h2>Conclusion</h2>
+            <p>You should now have a better understanding of some more intricate ways vim can be assist you. Even though it may seem like a lot, it is just scratching the surface.</p>
+            <p>There are many functions that we haven&#39;t covered, including registers, vim plugins, macros, and the.vimrc file. As a result, if you want to learn more about vim, I&#39;ve provided some more resources.The more you practice and use it every day, the more natural it will feel, and the more powerful it will become, </p>
+            <p><strong>Recourse to learn vim</strong></p>
+            <ol>
+            <li><a href="https://vim-adventures.com/" style="text-decoration:none">Vim Adventures - Learn vim by playing game.</a></li>
+            <li><a style="text-decoration:none" href="https://www.amazon.com/Practical-Vim-Edit-Speed-Thought/dp/1680501275">The boook i recommend to learn vim &quot; Practical Vim: Edit Text at the Speed of Thought &quot;.</a></li>
+            <li><a href="https://github.com/iggredible/Learn-Vim" style="text-decoration:none"> Also checkout Learn-Vim - github guide to learn vim.</a></li>
+            <li> <a href="https://www.openvim.com/" style="text-decoration:none">Definetly checkout interactive tutorial from openvim.</a> </li>
+            <li><a href="http://www.vimgenius.com/" style="text-decoration:none">Also checkout lessons from vimgenius.</a></li>
+            <li><a href="https://www.youtube.com/c/LukeSmithxyz" style="text-decoration:none"> Also check Luke Smith videos on youtube.</a></li>
+            </ol>
+
+        </div>
+        <div id="next-read" style="">
+            <h2 style="border-bottom: 4px solid black;width: fit-content;margin-bottom: 12px;">READ THIS NEXT</h2>
+        </div>
+                    <div class="newsletter">
+            <!-- Begin Mailchimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="https://gmail.us8.list-manage.com/subscribe/post?u=e9989e4842270d4ead6e85208&amp;id=c17b03bc70&amp;f_id=004d64e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
+                    <div id="mc_embed_signup_scroll">
+                    <h2>I occasionally write an email newsletter! Subscribe to my newsletter and never miss any updates.</h2>
+            <div class="mc-field-group">
+                <!-- <label for="mce-EMAIL" >Email Address: 
+            </label> -->
+                <input type="email" value="" name="EMAIL" placeholder="Email " class="required email" id="mce-EMAIL" required>
+                <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+            </div>
+                <div id="mce-responses" class="clear foot">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e9989e4842270d4ead6e85208_c17b03bc70" tabindex="-1" value=""></div>
+                    <div class="optionalParent">
+                        <div class="clear foot">
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                            <br/><br/><br/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+        
+        </div>
+    </main>
+</body>
+<script src="/scripts/main.min.js"></script>
+</html>
+
+
+

@@ -1,14 +1,16 @@
 body{
-    background-image: radial-gradient( circle farthest-corner at 0.3% 0.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% );
+     background-image: radial-gradient( circle farthest-corner at 0.3% 0.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% ); 
+    /* background-image: linear-gradient(to right rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% ); */
     margin-left: 10%;
     margin-right: 7%;
     font-family: avenir, sans-serif;
+    height: fit-content;
 }
 main{
     font-family: 'Cardo', serif;;
     display: grid;
     place-items: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 /* @font-face {
     font-family: avenir;
@@ -84,7 +86,8 @@ main{
 }  */
 #mce-EMAIL{
     width:400px;
-    padding:15px 10px;
+    padding:15px 2px;
+    padding-right: 25px;
     position: absolute;
     left: 40%;
     transform: translateX(-50%);
@@ -133,7 +136,7 @@ h2{
         width:180px;
         position: absolute;
         font-size: 16px;
-        padding:12px 8px;
+        padding:12px 15px;
         left:40%;
         
     }
@@ -150,7 +153,8 @@ h2{
         width:280px;
         left:40%;
         font-size:18px;
-        padding:15px 10px;
+        padding:15px 20px;
+        padding-right: 60px;
     }
     #mc-embedded-subscribe{
         left: calc(40% + 151px);
@@ -188,8 +192,9 @@ img {
 
 .tag {
     align-self: flex-start;
-    padding: 0 .75em;
+    padding: 0.2em .75em;
     border-radius: 1em;
+    margin-left: 15px;
     font-size: .75rem;
     border: 2px solid #8F00F1;
     display:inline;
@@ -210,6 +215,7 @@ img {
 }
 .content p{
     margin-top:5px;
+    font-size: 22px ;
 } 
 @media screen and (max-width:380px) {
     .card{

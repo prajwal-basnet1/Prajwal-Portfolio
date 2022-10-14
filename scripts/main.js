@@ -23,13 +23,13 @@ if ( page==="john-wooden.html") {
 
     //The code below will show READ THIS NEXT for john wooden blog.
 
-    fetch("/scripts/readmore.min.html")
+    fetch("/scripts/readmore/readmore.min.html")
     .then(res=>res.text())
     .then(data=>{
         let parser=new DOMParser()
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
-        content.children[0].style.display="none"
+        content.children[1].style.display="none"
 
         const container=document.getElementById('next-read').appendChild(content)
     })
@@ -37,37 +37,61 @@ if ( page==="john-wooden.html") {
 
 if ( page==="ntc.html") {
     //The code below will show READ THIS NEXT for Ntc analysis blog.
-    fetch("/scripts/readmore.min.html")
+    fetch("/scripts/readmore/readmore.min.html")
     .then(res=>res.text())
     .then(data=>{
         let parser=new DOMParser()
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
-        content.children[1].style.display="none"
+        content.children[2].style.display="none"
         const container=document.getElementById('next-read').appendChild(content)
     })
 }
+if (page==="vimessentials.html") {
+    fetch("/scripts/readmore/readmore.min.html")
+    .then(res=>res.text())
+    .then(data=>{
+        let parser=new DOMParser()
+        let doc=parser.parseFromString(data,"text/html")
+        let content=doc.getElementById("read-more")
+        content.children[3].style.display="none"
+        const container=document.getElementById('next-read').appendChild(content)
+    })
+
+}
 
 
-//The code below is used for navbar.
+//The code below is used for navbar and newsletter for whole blog folder.
 
 const nav=document.querySelector(".navbar-container")
-fetch("/scripts/navbar.min.html") 
+fetch("/scripts/navbar/navbar.min.html") 
 .then(res=>res.text())
 .then(data=>{
 
     let parser= new DOMParser();
     let doc= parser.parseFromString(data,"text/html")
 
-    var path = window.location.pathname;
-    var page = path.split("/").slice(1,2).toString();
+    let path = window.location.pathname;
+    let page = path.split("/").slice(1,2).toString();
 
     if(page==="blog")
     {
         let blog=doc.getElementById('inner-blog')
-        // let blog=doc.getElementById('blog')
         blog.style.textDecoration='line-through' 
         blog.style.color='#8f00f1'
+        console.log(page)
+        //Adding newsletter at bottom
+        fetch("/scripts/newsletter/news_letter.min.html")
+        .then(res=>res.text())
+        .then(data=>{
+            let parser= new DOMParser()
+            let doc=parser.parseFromString(data,"text/html")
+            let subscribe=doc.getElementById("subscribe")
+            console.log(subscribe)
+            const newsLetter=document.getElementById("newsletter").appendChild(subscribe)
+        })
+
+
     }
     else if(page==="resume")
     {

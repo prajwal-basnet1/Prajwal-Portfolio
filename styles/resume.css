@@ -6,11 +6,13 @@ body{
     overflow-x: hidden;
     font-family: Helvetica,avenir, sans-serif;
     background-color: #F6F9FC;
+    margin-left: 10%;
+    margin-right: 7%;
 }
 main{
     position: absolute;
     font-size: 16px;
-     max-width: 800px; 
+    max-width: 800px; 
     left: 50%;
     margin-top: 10px;
     transform: translate(-50%);
@@ -102,6 +104,10 @@ footer{
     color: blue;
 }
 @media screen and (max-width:480px) {
+body{
+    margin-left: 2%;
+    margin-right: 2%;
+}
 main, header{
     font-size: 14px;
     width: 100%;

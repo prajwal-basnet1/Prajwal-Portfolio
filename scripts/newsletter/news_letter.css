@@ -1,14 +1,19 @@
 #mc-embedded-subscribe{
     position: absolute;
-    left:calc(40% + 211px);
+    left:calc(40% + 205px);
     padding:15px 30px;
     width:fit-content;
     background-color: #8f00f1;
     font-size: 18px;
     font-family: avenir, sans-serif;
     font-weight: 600;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px ;
+    margin-top: -1px;
+}
+#mce-EMAIL{
+    padding: 12px 15px;
+    outline: none;
 }
 #mc-embedded-subscribe:hover{
     color:white;
@@ -19,12 +24,13 @@
         position: absolute;
         font-size: 16px;
         padding:12px 15px;
+        padding-right: 30px;
         left:40%;
         
     }
     #mc-embedded-subscribe{
         position: absolute;
-        left:calc(30% + 99px);
+        left:calc(40% + 88px);
         width:fit-content;
         padding: 12px 10px;
         font-size: 16px;

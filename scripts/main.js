@@ -30,6 +30,7 @@ if ( page==="john-wooden.html") {
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
         content.children[1].style.display="none"
+        content.dispatchEvent[4].style.display="none"
 
         const container=document.getElementById('next-read').appendChild(content)
     })
@@ -43,10 +44,14 @@ if ( page==="ntc.html") {
         let parser=new DOMParser()
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
-        content.children[2].style.display="none"
+        content.children[2].style.display="none"//not to display itself
+        content.children[4].style.display="none"
+
         const container=document.getElementById('next-read').appendChild(content)
     })
 }
+
+
 if (page==="vimessentials.html") {
     fetch("/scripts/readmore/readmore.min.html")
     .then(res=>res.text())
@@ -55,12 +60,26 @@ if (page==="vimessentials.html") {
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
         content.children[3].style.display="none"
+        content.children[1].style.display="none"
         const container=document.getElementById('next-read').appendChild(content)
     })
 
 }
 
 
+if ( page==="docker.html") {
+    //The code below will show READ THIS NEXT for Ntc analysis blog.
+    fetch("/scripts/readmore/readmore.min.html")
+    .then(res=>res.text())
+    .then(data=>{
+        let parser=new DOMParser()
+        let doc=parser.parseFromString(data,"text/html")
+        let content=doc.getElementById("read-more")
+        content.children[4].style.display="none"//not to show itself
+        content.children[1].style.display="none"//not to show john wooden blog
+        const container=document.getElementById('next-read').appendChild(content)
+    })
+}
 //The code below is used for navbar and newsletter for whole blog folder.
 
 const nav=document.querySelector(".navbar-container")

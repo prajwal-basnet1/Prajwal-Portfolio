@@ -27,7 +27,6 @@ main{
     font-family: 'Oswald',sans-serif;;
     text-transform: uppercase;
 }
-
  /* .navbar-container {
     display: flex;
     flex-direction: row;
@@ -130,6 +129,9 @@ h2{
     text-decoration: none;
     color:black;
 }
+.card {
+    border-radius: 20px;
+}
 
 @media screen and (max-width:380px) {
     #mce-EMAIL{
@@ -142,7 +144,7 @@ h2{
     }
     #mc-embedded-subscribe{
         position: absolute;
-        left:calc(30% + 99px);
+        left:calc(40% + 99px);
         width:fit-content;
         padding: 12px 10px;
         font-size: 16px;
@@ -168,7 +170,7 @@ img {
     max-width: 100%;
     display: block;
     object-fit: cover;
-    height: 25vh;
+    height: 27vh;
 }
 .card {
     display: flex;
@@ -177,7 +179,6 @@ img {
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     /* box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1); */
-    border-radius: 0.4em;
     background: #ECE9E6;
     background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 

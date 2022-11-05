@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta author="author" content="Prajwal Basnet">
+    <meta name="keywords" content="docker, docker explained, docker for begginer,docker simplified">
+    <meta name="description" content="Getting started with Docker">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting started with Docker</title>
+    <link rel="stylesheet" href="/styles/blog.min.css">
+</head>
+<style>
+        li{
+            list-style: none;
+            }
+
+        li{
+            padding-bottom: 25px;
+        }
+        h2{
+            margin-top: 50px;
+        }
+        .explanation-img{
+            width:90%;
+            max-height: 350px;
+        }
+        #docker-explanation{
+            width: 60%;
+            height:450px;
+        }
+
+        .code-background{
+            border-left: 9px solid #8f00f1;;
+            background-color: #EFEFEF;
+            /* background-color: #5A5D7A; */
+            /* background-color: #EEEEEE; */
+            padding-left: 15px;
+            padding-top: 12px; 
+            padding-bottom: 12px;
+            color:#666;
+        }    
+        .code-background p{
+            color:#666;
+        }
+</style>
+<body>
+    <header class="navbar-container">
+
+
+    </header>
+
+    <main>
+        <div class="blog-content">
+            <div class="blog-intro">
+                    <h1 class="title">Getting started with Docker.</h1>
+                    <p class="title-des">The tool every tech enthusiast should have in his toolbox.</p>
+                    <p class="title-des">By <span>Prajwal Basnet</span> &nbsp;|&nbsp; Nov 1 2022 &nbsp;|&nbsp; 7 minute read</p>
+                    <img src="/blog/docker/dockerImages/Docker-Logo-2013.png" loading="lazy" class="cover-img" alt="Docker logo">
+            </div>
+        <div class="content">
+            <h2 id="introduction">INTRODUCTION</h2>
+                <p>Docker is a container technology that utilizes the Os host kernel to separate applications from infrastructure (hardware). It is similar to a Virtual machine separating Operating System from the underlying hardware, but Instead of the fat requirements of a virtual machine, Docker is lightweight, and portable - as it contains only essential dependencies (not an entirely new O.S).</p>
+            
+            <h2 id="why-docker-">Why Docker ?</h2>
+                <p>The key benefits of using Docker are the standardized packaging and deployment of applications across all environments. Additionally, we don&#39;t have to install every application dependency on our machine if we utilize Docker. For instance, let's say you are planning to learn programming language, you can create container( say an ubuntu image) and code in that container by mounting docker data to local storage with <a href="/blog/vim/vimessentials.html">vim</a> instead of coding in your host Operating system. Then, you can push that container to docker hub which will let you pull that container remotely.</p>
+                <img src="/blog/docker/dockerImages/dockerinnutshell.jpg" id="docker-explanation">
+            <h2>Difference between Virtualization and Containerzation</h2>
+                <p>Before understanding the difference between virtual machines and Docker, first, we need to understand the technologies behind them. Virtual machine use Virtualization meanwhile, Docker use Containerization.</p>
+                <p>Virtualization is a process of creating a completely new operating system (Virtual machine) on top of the host operating system (underlying machine) with the help of software called - hypervisor.</p>
+                <p>Meanwhile, Containerization is a process of creating operating system-level virtualization - as it runs on the same O.S as the host - with the help of a container engine (or, in plain English, process that is responsible for packaging and deploying application).</p>
+                <img src="/blog/docker/dockerImages/containers-vs-virtual-machines_17.jpg" class="explanation-img" alt="Containerization and virtualization difference">
+            <h2 id="components-of-docker">Components of Docker</h2>
+                <p>Docker engine comprises the docker daemon (server), Rest api, and docker Cli.</p>
+                <p><strong>Docker daemon: </strong>A system service or process thats  docker images as well as create namespaces and cgroups for containers. It uses APIs to accomplish its functionality.</p>
+                <p><strong>Rest Api : </strong>It deals with interation of application.</p>
+                <p><strong>Docker Cli : </strong>Allows user to make commands to docker daemon, such as running and stopping containers, removing images etc.</p>
+                <img src="/blog/docker/dockerImages/dockerarchitecture.png"  class="explanation-img" alt="docker components">
+            <h2 id="docker-registry">Docker Registry</h2>
+                <p>It is a place where images are stored, and the official place to store images is DockerHub. We can push(upload) and pull(download) our images to DockerHub to make them accessible from anywhere. For git, it is comparable to github.</p>
+            <h2 id="docker-images-and-containers">Docker Images and Containers</h2>
+                <p>Docker image is a file that comprises everything needed to run an application which includes dependencies, environment variables, configuration files etc. we can create our own image and make as much container as we like.</p>
+                <p>Docker container is a instance (children) of a image. It is a environment where we interact and where our application runs.</p>
+                <p>Now, let us try to understand image and container with an analogy: Containers are like a cookies you make and Images are the recipe for making your cookies. A recipe can be used to make as much cookies as your resources allow. Similarly, an image is used to make as much container as your recourse allow.</p>
+            <h2 id="docker-installation">Docker Installation</h2>
+                <p>For Debian based O.S :</p>
+                <p>Update your package manager : </p>
+                <ul class="code-background">
+                    <code>Sudo apt-get update</code>
+                </ul>
+                <p>Then, Install Docker :</p>
+                <ul class="code-background">
+                    <code>Sudo apt-get install docker.io</code>
+                </ul>
+                <p>Now, Check whether Docker is properly installed :</p>
+                <ul class="code-background">
+                <p><code>Docker version</code></p>
+                </ul>
+                <h2 id="docker-essentials">Docker Essentials</h2>
+                <p>Now that we&#39;ve learned some fundamentals, let&#39;s get tangible and functional.</p>
+                <p>Before building our own image file, let&#39;s first learn by installing official Ubuntu images from Dockerhub.</p>
+                <ul class="code-background">
+                <p><code>Docker pull UBUNTU : To simply pull images.</code></p>
+                </ul>
+                <ul class="code-background">
+                <p><code>Docker run UBUNTU : it will first try to install image from local environment, if it is not there then it will install from Dockerhub.</code></p>
+                </ul>
+                <p><em>By default, Docker doesn&#39;t have terminal so it runs on non interactive mode. Thus, inorder to listen inputs you need to specify -it flags - where I stands for interactive and t stands for pseudo terminal.</em></p>
+                <ul class="code-background">
+                <p><code>Docker run -it --name DOCKERNAME UBUNTU : it will provide interactive mode and name image name as DOCKERNAME.</code></p>
+                </ul>
+                <p><em>To stop the container, write <code>exit</code> in docker terminal.</em></p>
+                <p><strong>Basic Docker commands</strong></p>
+                <ul class="code-background">
+                <p><code>Docker images : to list images</code></p>
+                <p><code>Docker rmi images : to remove image</code></p>
+                <p><code>Docker ps : to list running containers.</code></p>
+                <p><code>Docker ps -a : to list both running and stopped containers.</code></p>
+                <p><code>Docker rm container : to remove container</code></p>
+                <p><code>Docker start container : to start stopped container</code></p>
+                <p><code>Docker stop container : to stop a running container.</code></p>
+                <p><code>Docker inspect container/image : to inspect image or container.</code></p>
+                </ul>
+                <p><em>
+                Once you exited from docker terminal, you may again want to start from where you have exited.</em></p>
+                <ul class="code-background" >
+                <p><code>Docker exec -it container /bin/bash : start interactive mode to stopped container.</code></p>
+                </ul>
+                <ul class="code-background">
+                <p><code>docker exec container cat /etc/hosts : to execute command from container without interactive terminal</code></p>
+                <p><code>docker run -d --it ubuntu : to detach container</code></p>
+                <p><code>docker logs container : to see container log history.</code></p>
+                <p><code>docker cp /hostfile (container_id):/(to_the_place_you_want_the_file_to_be) : move files from host to docker.</code></p>
+                </ul>
+                <!--Docker run --name NAME --tag TAG IMAGE_NAME : To create container with coustom name and tag-->
+            <h2 id="port-mapping">Port Mapping</h2>
+           <ul class="code-background">
+                <p><code>docker run -p 80 (local computer port):5000(docker port) UBUNTU : this will map port 80 to 5000 port.</code></p>
+            </ul>
+            <h2 id="volume-mapping">Volume Mapping</h2>
+                <p>When we delete the container, all our data is also deleted which might be frustrating if we haven&#39;t backed up. Therefore,  Docker provides volume mapping options which enable us to presist data - even if container is deleted - by storing in external volume.</p>
+                <p>There are two way to mount data :</p>
+                <ul style="list-style:none">
+                    <li>- volume mounting </li>
+                    <li>- bind mounting</li>
+                </ul>
+                <p><strong><em>Volume Mounting:</em></strong></p>
+                <p>In volume mounting, data is stored in default location( /var/lib/dockers/volumes). We can create volume with following command below, even if we didn&#39;t create volume docker will automatically create one for you.</p>
+                <ul class="code-background" >
+                <p><code>docker create volume volume_1 : to create storage name volume_1</code></p>
+                <p><code>docker run -v volume_1:storagepath UBUNTU : store data in /var/lib/docker/volumes/volume_1 On your pc</code> </p>
+                </ul>
+                <p>or</p>
+                <ul class="code-background">
+                    <p><code>docker run -v /data UBUNTU : store data from docker (/data) to default location</code></p>
+                </ul>
+                <p><strong>Bind mounting:</strong></p>
+                <p>The key difference is  bind mounting can mount data to any location unlike volume mounting - which mounts on /var/lib/docker/volumes.</p>
+                <ul class="code-background">
+                <p><code>docker run -v /opt/dockerdata (or any path on your pc) :/var/lib/database (docker data path) : this will backup docker database into /opt/dockerdata.</code></p>
+                </ul>
+                <p><em>I would highly recommend you to read this <a href ="https://blog.yipl.com.np/volume-mapping-a-way-to-make-persistent-data-storage-in-docker-6a47c951a0e7">Blog</a>.</em></p>
+            <h2 id="environment-variable">Environment variable</h2>
+                <p>To set an environment variable to your image, use -e flag as shown below: </p>
+                <ul class="code-background">
+                    <p><code>docker run -e USER_NAME=STAINEE UBUNTU : sets environment variable.</code></p>
+                </ul>
+            <h2 id="networking-in-docker">Networking In Docker</h2>
+                <p>Docker uses a bridge network by default, which will assign an IP address to each container. Let&#39;s take an example where the image has three containers and an IP address of 172.17.0.1. Then, each container will receive an IP address starting with 172.17.0.2 .</p>
+                <p>We can also map Docker network to the host network. That means if port 80 is opened on a local machine, docker will automatically open port 80 without using port mapping manually.  We need to use flag below when running the image.</p>
+                <ul class="code-background">
+                    <p><code>--network=host</code></p>
+                </ul>
+                <p>And to isolate the container completely we use the following flag below: </p>
+                <ul class="code-background">
+                    <p><code>--network=none</code></p>
+                </ul>
+            <h2 id="creating-our-own-docker-image">Creating Our Own Docker Image</h2>
+                <p>We have learned almost all essentials commands in docker. Now, It is time to create our own image. To create our own image, we need <code>Dockerfile</code> - name needs to be exactly same - where we write instructions to setting up our image.</p>
+                <p>Once we have set up all the instruction in Dockerfile, we need to build your image on our system.</p>
+                <p><em>Dockerfile sample</em></p>
+
+                <code>
+                FROM Ubuntu:20.04</br>
+                RUN apt-get update && apt install vim</br>
+                COPY . /docker</br>
+                WORKDIR /docker</br>
+
+                </code>
+
+                <ul class="code-background">
+                    <p><code>docker build -t image_name:tag_name dockerfile : to build command by specifying tag which is similar to your id.</code></p>
+                </ul>
+                <p><em>After building image locally, we can push our image on dockerhub to acess our image remotely.</em></p>
+               <ul class="code-background" >
+                    <p><code>docker push username/repo:image_tag : to push image on dockerhub.</code></p>
+                </ul>
+                <p><em>if you made changes to container, you can commit changes and push image again:</p>
+                </em>
+                <ul class="code-background">
+                    <p><code>docker commit container_id username/image_name : to modify image</code></p>
+                </ul>
+            <h2 id="conclusion">Conclusion</h2>
+                <p>In the end, Docker is a tool for building, managing and containerization of application. In this blog, we have covered quite a bit of docker core functionality. For more advance concept (or to cement your understanding), I advise everyone reading this to checkout the reference below. I hope you keep this tool in your toolbox - especially if you are into devops or software developing.</p>
+            <h2>REFERENCE</h2>
+                <ol>
+                <li><a href="https://kodekloud.com/p/docker-labs">https://kodekloud.com/p/docker-labs</a></li>
+                <li><a href="https://www.youtube.com/watch?v=fqMOX6JJhGo&t=3069s&ab_channel=freeCodeCamp.org">CodeCamp.org - youtube tutorial</a></li>
+                <li><a href="https://docs.docker.com/">Official docker documentation</a></li>
+                <li><a href="https://blog.devgenius.io/docker-explained-in-simple-terms-178748e28e99">blog.devgenius.io</a></li>
+                <li><a href="https://blog.yipl.com.np/volume-mapping-a-way-to-make-persistent-data-storage-in-docker-6a47c951a0e7">blog.yipl.com</a></li>
+                </ol>
+
+            <div id="next-read" >
+                <h2 style="border-bottom: 4px solid black;width: fit-content;margin-bottom: 12px;">READ THIS NEXT</h2>
+        </div>
+            <div id="newsletter">
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+<script src="/scripts/main.min.js"></script>
+</html>
+
+
+
+
+
+
+
+
+

@@ -55,7 +55,7 @@
             <div class="blog-intro">
                     <h1 class="title">Getting started with Docker.</h1>
                     <p class="title-des">The tool every tech enthusiast should have in his toolbox.</p>
-                    <p class="title-des">By <span>Prajwal Basnet</span> &nbsp;|&nbsp; Nov 1 2022 &nbsp;|&nbsp; 7 minute read</p>
+                    <p class="title-des">By <span>Prajwal Basnet</span> &nbsp;|&nbsp; Nov 5 2022 &nbsp;|&nbsp; 7 minute read</p>
                     <img src="/blog/docker/dockerImages/Docker-Logo-2013.png" loading="lazy" class="cover-img" alt="Docker logo">
             </div>
         <div class="content">
@@ -64,18 +64,18 @@
             
             <h2 id="why-docker-">Why Docker ?</h2>
                 <p>The key benefits of using Docker are the standardized packaging and deployment of applications across all environments. Additionally, we don&#39;t have to install every application dependency on our machine if we utilize Docker. For instance, let's say you are planning to learn programming language, you can create container( say an ubuntu image) and code in that container by mounting docker data to local storage with <a href="/blog/vim/vimessentials.html">vim</a> instead of coding in your host Operating system. Then, you can push that container to docker hub which will let you pull that container remotely.</p>
-                <img src="/blog/docker/dockerImages/dockerinnutshell.jpg" id="docker-explanation">
+                <img src="/blog/docker/dockerImages/dockerinnutshell.jpg" id="docker-explanation" alt="Docker in nutshell" loading="lazy">
             <h2>Difference between Virtualization and Containerzation</h2>
                 <p>Before understanding the difference between virtual machines and Docker, first, we need to understand the technologies behind them. Virtual machine use Virtualization meanwhile, Docker use Containerization.</p>
                 <p>Virtualization is a process of creating a completely new operating system (Virtual machine) on top of the host operating system (underlying machine) with the help of software called - hypervisor.</p>
                 <p>Meanwhile, Containerization is a process of creating operating system level virtualization - as it runs on the same O.S as the host - with the help of a container engine (or, in plain English, process that is responsible for packaging and deploying application).</p>
-                <img src="/blog/docker/dockerImages/containers-vs-virtual-machines_17.jpg" class="explanation-img" alt="Containerization and virtualization difference">
+                <img src="/blog/docker/dockerImages/containers-vs-virtual-machines_17.jpg" class="explanation-img" loading="lazy" alt="Containerization and virtualization difference">
             <h2 id="components-of-docker">Components of Docker</h2>
                 <p>Docker engine comprises the docker daemon (server), Rest api, and docker Cli.</p>
                 <p><strong>Docker daemon: </strong>A system service or process thats create docker images as well as namespaces and cgroups for containers. It uses APIs to accomplish its functionality.</p>
                 <p><strong>Rest Api : </strong>It deals with interation of application.</p>
                 <p><strong>Docker Cli : </strong>Allows user to make commands to docker daemon, such as running and stopping containers, removing images etc.</p>
-                <img src="/blog/docker/dockerImages/dockerarchitecture.png"  class="explanation-img" alt="docker components">
+                <img src="/blog/docker/dockerImages/dockerarchitecture.png"  class="explanation-img" loading="lazy" alt="docker components">
             <h2 id="docker-registry">Docker Registry</h2>
                 <p>It is a place where images are stored, and the official place to store images is DockerHub. We can push(upload) and pull(download) our images to DockerHub to make them accessible from anywhere. For git, it is comparable to github.</p>
             <h2 id="docker-images-and-containers">Docker Images and Containers</h2>

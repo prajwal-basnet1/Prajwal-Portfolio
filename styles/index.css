@@ -2,7 +2,7 @@
     --bg-color:/*#FEFFE6#CCCCE4#D4E4EB#E2F2EB*/#BDD4E7;
     --typewriterspeed:2000ms;
     --typewriterchar:16;
-    --color-neon:/*hsl(317,100%,54%)*/#8f00f1;
+    --color-neon:/*hsl(317,100%,54%)#8f00f1*/#ff008e;
     --font-content:avenir,'Cardo', sans-serif;
     --font-head:tiempos,'Oswald', serif;
     --text-heading:#333333;
@@ -24,19 +24,19 @@
     font-display: swap;
 }
 body{
-    /*background-color: var(--bg-color);
-    background-color: #8EC5FC;*/
-    background-image: radial-gradient( circle farthest-corner at 1.3% 2.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% );
+    /*background-color: var(--bg-color);*/
+    /* background-color: #E4E8F3; */
+     background-image: radial-gradient( circle farthest-corner at 1.3% 2.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% ); 
     margin-left: 10%;
     margin-right: 7%; 
     font-family: var(--font-content);
     color:var(--text)
 }
  .greeting {
-    margin-top: clamp(40px,10%,220px);
+    margin-top: clamp(40px,7%,220px);
     margin-left: 15px ;
     font-weight: 600;
-    margin-bottom: 0.8em;
+    /* margin-bottom: 0.8em; */
     font-family: tiempos, sans-serif;
     letter-spacing: 0.2em;
     font-size: 35px;
@@ -48,7 +48,7 @@ body{
     font-family: var(--font-content);
     text-transform: uppercase;
     position: relative;
-    color:/*#52307C*/#8f00f1;
+    color:/*#52307C#8f00f1*/var(--color-neon);
     letter-spacing: 5px;
 }
 .display-name::before,
@@ -188,25 +188,28 @@ margin-top: 10px;
     text-decoration: none;
     color: black;
     border-radius: 18px;
-    padding: 20px 20px;
     box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.4) 0px 0px 0px 1px;
+}
+.card__body{
+    padding: 0px 10px;
 }
 .project-heading{
     display: flex;
     justify-content: center;
     font-size: 32px;
+    margin-top: 5px;
     margin-bottom: 20px;
-    margin:20px 0;
     font-family: var(--font-head);
     color:var(--text-heading);
     text-transform: uppercase;
 }
 .project-language{
     width: 100%;
-    margin-top:30px;
+    margin-top:10px;
     display: flex;
     flex-wrap: wrap;
     overflow-wrap: break-word;
+    padding:10px 20px;
 }
 
 .projects:hover{
@@ -221,7 +224,7 @@ box-shadow:
 5px 5px  rgba(182,199,226,0.65),
 6px 6px  rgba(182,199,226,0.65);
 -webkit-transform: translateX(-3px);
-transform: translateX(-3px);
+transform: translate(-5px,-8px);
 transition: .5s ease;
 }
 
@@ -278,9 +281,9 @@ transition: .5s ease;
     margin-left: 15%;
 }
 .my-introduction{
-    margin-left: 10%;
+    margin-left: 5%;
     font-size: 20px; 
-    margin-right: 10%;
+    margin-right: 5%;
 }
 /*use media query for below 1200 width*/
 #contact {
@@ -317,17 +320,15 @@ transition: .5s ease;
 
 /*For Extra Small Devices*/
 @media screen and (max-width:350px)  {
-    /* body{
-         margin-left: 10%; 
-        margin:0px 0px;
-        overflow-x: hidden;
-    } */
+    body{
+        margin-left: 2%; 
+    }
     /* main{
         margin-left: 3%;
         margin-right: 3%;
     } */
      .navbar-container{
-        margin:30px 0px;
+        margin:10px 0px;
     }
      .greeting{
         font-size: 20px;
@@ -350,7 +351,7 @@ transition: .5s ease;
         font-size: 18px;
     }
     .terminal{
-        margin-top: 40px;
+        margin-top: 20px;
     }
     .terminal-intro-container span,p{
         
@@ -394,10 +395,11 @@ transition: .5s ease;
 }
 /*For Modern Mobile Devices*/
 @media screen and (min-width:350px) and (max-width:790px) {
-    /* body{
+     body{
+        margin-left: 3%;
+        margin-right: 0%;
         overflow-x: hidden;
-        margin:0px 0px;
-    } */
+    }
     main{
         margin-left: 3%;
         margin-right: 3%;
@@ -406,7 +408,7 @@ transition: .5s ease;
      .navbar-container{
         display: flex;
         justify-content: center;
-        margin:25px 0px;
+        margin:15px 0px;
         width: auto;
     }
     .greeting{
@@ -456,7 +458,7 @@ transition: .5s ease;
     }
     .terminal{
         width: 100%;
-        margin-top: 60px;
+        margin-top: 40px;
 
     }
     .intro-terminal{
@@ -464,7 +466,7 @@ transition: .5s ease;
         font-size: 16px;
     }
     .project-image{
-        height: clamp(200px,16rem,300px);
+        height: clamp(200px,14rem,300px);
     }
      #project-container{
         display: grid;

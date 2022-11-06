@@ -173,44 +173,44 @@ h2{
     h1{
         font-size: 24px;
     }
-    /* #mce-EMAIL{
+     #mce-EMAIL{
         width:180px;
         position: absolute;
         font-size: 16px;
         padding:12px 8px;
         left:40%;
         
-    } */
+    } 
     h2{
         font-size: 18px;
     }
-    /* #mc-embedded-subscribe{
+     #mc-embedded-subscribe{
         position: absolute;
         left:calc(30% + 99px);
         width:fit-content;
         padding: 12px 10px;
         font-size: 16px;
-    } */
+    } 
 }
 @media screen and (min-width:380px) and (max-width:856px) {
-    /* #mce-EMAIL{
+     #mce-EMAIL{
         width:220px;
         left:40%;
         font-size:18px;
         padding:15px 10px;
-    } */
+    } 
     h1{
         font-size:26px ;
     }
     h2{
         font-size: 20px;
     }
-    /* #mc-embedded-subscribe{
+     #mc-embedded-subscribe{
         left: calc(40% + 121px);
         width:fit-content;
         padding:15px 12px;
         font-size: 18px;
-    } */
+    } 
 
 }
 

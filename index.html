@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Oswald:wght@400&display=swap" as="font" rel="preload">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="/styles/index.min.css">
 </head>
 <body>
      <header class="navbar-container">
@@ -29,6 +29,7 @@
         <div class="greeting">
             <p id="greetings">Hi! I'm </p>
         </div> 
+        </br>
         <div class="display-name-container">
             <h1 class="display-name">&#62; Prajwal Basnet</h1>
         </div>
@@ -94,21 +95,49 @@
         
         <div id="project-container">
             <a class="projects" href="https://github.com/prajwal-basnet1/NiXa">
-                <div >
-                    <img src="./images/nixa_comp.webp" class="project-image" alt="first project image" loading="lazy" width="600px" height="300px">
-                    <p class="project-heading">Cli tool for Nepal stock exchange</p>
-                    <p class="project-des">My first tool built with python that gets all the information about nepal capital market and information about companies listed in Nepal stock exchange through commands.</p>
+                <div class="card">
+                    <div class="card__header">
+                        <img src="./images/nixa_comp.webp" class="project-image" alt="first project image" loading="lazy" >
+                    </div>
+                    <div class="card__body">
+                        <div class="content">
+                        <p class="project-heading">Cli tool for Nepal stock exchange</p>
+                        <p class="project-des">My first tool built with python that gets all the information about nepal capital market and information about companies listed in Nepal stock exchange through commands.</p>
+                        </div>  
+                    </div>
                     <div class="project-language">
                         <span class="language-option">Python</span>
                     </div>
                 </div>
             </a>
+        <!-- <a href="/blog/docker/docker.html">
+            <div class="card">
+                <div class="card__header">
+                    <img src="/blog/docker/dockerImages/Docker-Logo-2013.png" alt="Docker logo" class="card__image" width="600px" loading="lazy">
+                </div>
+                <div class="card__body">
+                    <div>
+                        <span class="tag">Docker </span>
+                    </div>
+                    <div class="content">
+                        <h4>Getting Started With Docker</h4>
+                        <p>The tool every tech enthusiast should have in his toolbox.</p>
+                    </div>
+                </div>
+            </div>
+        </a> -->
 
             <a class="projects" href="https://github.com/prajwal-basnet1/Sys-Admin">
-                <div>
-                    <img src="./images/linux-Sysadmin.webp" class="project-image" width="600px" height="300px" alt="linux system admintool" loading="lazy" >
-                    <p class="project-heading">Linux Sys-Admin</p>
-                    <p class="project-des">Linux System Administrator tool built with bash script.This program is created for begineers as well as anyone working in linux environment.</p>
+                <div class="card">
+                    <div class="card__header">
+                        <img src="./images/linux-Sysadmin.webp" class="project-image"  alt="linux system admin tool" loading="lazy" >
+                    </div>
+                    <div class="card__body">
+                        <div class="content">
+                            <p class="project-heading">Linux Sys-Admin</p>
+                            <p class="project-des">Linux System Administrator tool built with bash script.This program is created for begineers as well as anyone working in linux environment.</p>
+                        </div> 
+                    </div>
                     <div class="project-language">
                         <span class="language-option">Bash Script</span>
                         <span class="language-option">Linux</span>
@@ -116,10 +145,16 @@
                 </div>
             </a>
             <a class="projects" href="https://github.com/prajwal-basnet1/King-clothing">
-            <div>
-                <img src="./images/eccomerce-site.webp" class="project-image" alt="Shoping Website | King clothing" loading="lazy" width="600px" height="300px">
-                <p class="project-heading">E-Commerce Website</p>
-                <p class="project-des">My first Shoping website built with React js.This project contains user friendly and completly responsive website which stores data in firebase.</p>
+            <div class="card">
+                <div class="card__header">
+                    <img src="./images/eccomerce-site.webp" class="project-image" alt="Shoping Website | King clothing" loading="lazy" >
+                </div>
+                <div class="card__body">
+                    <div class="content">
+                        <p class="project-heading">E-Commerce Website</p>
+                        <p class="project-des">My first Shoping website built with React js.This project contains user friendly and completly responsive website which stores data in firebase.</p>
+                    </div>
+                </div>
                 <div class="project-language">
                     <span class="language-option">HTML5</span>
                     <span class="language-option">Css</span>
@@ -131,10 +166,16 @@
             </a>
 
             <a class="projects" href="./blog/blogpage.html">
-                <div >
-                    <img src="./images/Nepal-stock-analysis.webp" class="project-image" alt="stock analysis" loading="lazy" width="600px" height="300px">
-                    <p class="project-heading">Stock Analysis</p>
-                    <p class="project-des">This project includes my analysis of the company.My take on the company financial condition along with few of my prediction with Charlie munger wisdom.</p>
+                <div class="card">
+                    <div class="card__header">
+                        <img src="./images/Nepal-stock-analysis.webp" class="project-image" alt="stock analysis" loading="lazy" >
+                    </div>
+                    <div class="card__body">
+                        <div class="content">
+                            <p class="project-heading">Stock Analysis</p>
+                            <p class="project-des">This project includes my analysis of the company.My take on the company financial condition along with few of my prediction with Charlie munger wisdom.</p>
+                        </div>
+                    </div>
                     <div class="project-language">
                         <span class="language-option">Html</span>
                         <span class="language-option">Css</span>
@@ -145,10 +186,16 @@
                 </div>
             </a>
             <a class="projects" href="https://calculator.basnetprajwal.com.np/">
-                <div>
-                    <img src="./images/javascript-calculator.webp" class="project-image" alt="Calculator project" loading="lazy" width="600px" height="300px">
-                    <p class="project-heading"> Calculator </p>
-                    <p class="project-des">An awesome Calculator built with HTML, CSS, JAVASCRIPT.This project does not contain any kind of frameworks.</p>
+                <div class="card">
+                    <div class="card__header">
+                        <img src="./images/javascript-calculator.webp" class="project-image" alt="Calculator project" loading="lazy" >
+                    </div>
+                    <div class="card__body">
+                        <div class="content">
+                            <p class="project-heading"> Calculator </p>
+                            <p class="project-des">An awesome Calculator built with HTML, CSS, JAVASCRIPT.This project does not contain any kind of frameworks.</p>
+                        </div>
+                    </div>
                     <div class="project-language">
                         <span class="language-option">Html</span>
                         <span class="language-option">Css</span>
@@ -158,10 +205,16 @@
                 </div>
             </a>
             <a class="projects" href="https://prajwal-basnet1.github.io/Monster-Rolodex/">
-                <div >
-                    <img src="./images/monster.webp" class="project-image" alt="Monster Rolodex" loading="lazy" width="600px" height="300px">
-                    <p class="project-heading"> Monster Rolodex</p>
-                    <p class="project-des">This project includes the list of monsters.This project helped me build better foundation in react.</p>
+                <div class="card">
+                    <div class="card__header">
+                        <img src="./images/monster.webp" class="project-image" alt="Monster Rolodex" loading="lazy" >
+                    </div>
+                    <div class="card__body">
+                        <div class="content">
+                            <p class="project-heading"> Monster Rolodex</p>
+                            <p class="project-des">This project includes the list of monsters.This project helped me build better foundation in react.</p>
+                        </div>
+                    </div>
                     <div class="project-language">
                         <span class="language-option">Html</span>
                         <span class="language-option">Css</span>
@@ -233,7 +286,7 @@
         </div>
     </main>
    <footer>
-    <br><br><br><br><br>
+    <br><br><br><br>
    </footer> 
     <script src="/scripts/main.min.js"></script> 
 </body>

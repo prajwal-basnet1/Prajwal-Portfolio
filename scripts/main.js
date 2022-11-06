@@ -30,8 +30,7 @@ if ( page==="john-wooden.html") {
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
         content.children[1].style.display="none"
-        content.dispatchEvent[4].style.display="none"
-
+        content.children[4].style.display="none"
         const container=document.getElementById('next-read').appendChild(content)
     })
 }
@@ -98,7 +97,6 @@ fetch("/scripts/navbar/navbar.min.html")
         let blog=doc.getElementById('inner-blog')
         blog.style.textDecoration='line-through' 
         blog.style.color='#8f00f1'
-        console.log(page)
         //Adding newsletter at bottom
         fetch("/scripts/newsletter/news_letter.min.html")
         .then(res=>res.text())
@@ -106,7 +104,6 @@ fetch("/scripts/navbar/navbar.min.html")
             let parser= new DOMParser()
             let doc=parser.parseFromString(data,"text/html")
             let subscribe=doc.getElementById("subscribe")
-            console.log(subscribe)
             const newsLetter=document.getElementById("newsletter").appendChild(subscribe)
         })
 

@@ -2,7 +2,7 @@
     --bg-color:/*#FEFFE6#CCCCE4#D4E4EB#E2F2EB*/#BDD4E7;
     --typewriterspeed:2000ms;
     --typewriterchar:16;
-    --color-neon:/*hsl(317,100%,54%)#8f00f1*/#ff008e;
+    --color-neon:/*hsl(317,100%,54%)*/#ff008e;
     --font-content:avenir,'Cardo', sans-serif;
     --font-head:tiempos,'Oswald', serif;
     --text-heading:#333333;
@@ -48,7 +48,7 @@ body{
     font-family: var(--font-content);
     text-transform: uppercase;
     position: relative;
-    color:/*#52307C#8f00f1*/var(--color-neon);
+    color:var(--color-neon);
     letter-spacing: 5px;
 }
 .display-name::before,
@@ -322,6 +322,7 @@ transition: .5s ease;
 @media screen and (max-width:350px)  {
     body{
         margin-left: 2%; 
+        margin-right: 1%;
     }
     /* main{
         margin-left: 3%;
@@ -397,7 +398,7 @@ transition: .5s ease;
 @media screen and (min-width:350px) and (max-width:790px) {
      body{
         margin-left: 3%;
-        margin-right: 0%;
+        margin-right: 2%;
         overflow-x: hidden;
     }
     main{

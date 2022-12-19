@@ -29,8 +29,10 @@ if ( page==="john-wooden.html") {
         let parser=new DOMParser()
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
-        content.children[1].style.display="none"
-        content.children[4].style.display="none"
+        if(content.children[5].style.display=="none" || content.children[3].style.display=="none") {
+            content.children[2].style.display="block"
+            content.children[5].style.display="block"
+        }
         const container=document.getElementById('next-read').appendChild(content)
     })
 }
@@ -43,8 +45,10 @@ if ( page==="ntc.html") {
         let parser=new DOMParser()
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
-        content.children[2].style.display="none"//not to display itself
-        content.children[4].style.display="none"
+        if(content.children[5].style.display=="none" || content.children[1].style.display=="none") {
+            content.children[5].style.display="block"
+            content.children[1].style.display="block"
+        }
 
         const container=document.getElementById('next-read').appendChild(content)
     })
@@ -58,8 +62,10 @@ if (page==="vimessentials.html") {
         let parser=new DOMParser()
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
-        content.children[3].style.display="none"
-        content.children[1].style.display="none"
+        if(content.children[4].style.display=="none" || content.children[3].style.display=="none") {
+            content.children[4].style.display="block"
+            content.children[3].style.display="block"
+        }
         const container=document.getElementById('next-read').appendChild(content)
     })
 
@@ -74,8 +80,26 @@ if ( page==="docker.html") {
         let parser=new DOMParser()
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
-        content.children[4].style.display="none"//not to show itself
-        content.children[1].style.display="none"//not to show john wooden blog
+        if(content.children[3].style.display=="none" || content.children[5].style.display=="none") {
+            content.children[3].style.display="block"
+            content.children[5].style.display="block"
+        }
+        const container=document.getElementById('next-read').appendChild(content)
+    })
+}
+
+if ( page==="mungerism.html") {
+    //The code below will show READ THIS NEXT for Ntc analysis blog.
+    fetch("/scripts/readmore/readmore.min.html")
+    .then(res=>res.text())
+    .then(data=>{
+        let parser=new DOMParser()
+        let doc=parser.parseFromString(data,"text/html")
+        let content=doc.getElementById("read-more")
+        if(content.children[1].style.display=="none" || content.children[2].style.display=="none") {
+            content.children[1].style.display="block"
+            content.children[2].style.display="block"
+        }
         const container=document.getElementById('next-read').appendChild(content)
     })
 }

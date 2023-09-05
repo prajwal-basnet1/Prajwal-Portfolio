@@ -3,8 +3,8 @@
     --typewriterspeed:2000ms;
     --typewriterchar:16;
     --color-neon:/*hsl(317,100%,54%)*/#ff008e;
-    --font-content:avenir,'Cardo', serif;
-    --font-head:tiempos,'Oswald', sans-serif;
+    --font-content:avenir,'Cardo', sans-serif;
+    --font-head:tiempos,'Oswald', serif;
     --text-heading:#333333;
     --text:#222; 
     --linar-gradient:linear-gradient(to right,#EAE5C9,#6CC6CB);

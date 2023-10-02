@@ -4,7 +4,7 @@
 }
 body{
     overflow-x: hidden;
-    font-family: Helvetica,avenir, sans-serif;
+    font-family: 'EB Garamond', serif;
     background-color: #F6F9FC;
     margin-left: 10%;
     margin-right: 7%;
@@ -28,12 +28,13 @@ main{
 .hero-name{
     display: flex;
     justify-content: center;
-    font-family: 'Tinos',tiempos,serif;
+    font-family: 'Manrope', sans-serif;
     margin-top:15px
 }
  .first{
      /* color: #a49999;  */
-    color:#6E6E73;
+    color:#000;
+    font-weight:600;
 } 
 .hero-contact{
     display: flex;
@@ -69,7 +70,7 @@ header{
 }
 .hero-experience>h3{
     padding-top: 15px;
-    color:#474747;
+    color:#000;
 }
 .hero-work{
     margin-left: 10%;

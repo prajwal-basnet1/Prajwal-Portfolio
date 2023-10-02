@@ -3,8 +3,8 @@
     --typewriterspeed:2000ms;
     --typewriterchar:16;
     --color-neon:/*hsl(317,100%,54%)*/#ff008e;
-    --font-content:avenir,'Cardo', sans-serif;
-    --font-head:tiempos,'Oswald', serif;
+    font-family: 'Manrope', sans-serif;
+    --font-head:tiempos,'Oswald', sans-serif;
     --text-heading:#333333;
     --text:#222; 
     --linar-gradient:linear-gradient(to right,#EAE5C9,#6CC6CB);
@@ -32,12 +32,37 @@ body{
     font-family: var(--font-content);
     color:var(--text)
 }
+
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; 
+  /* Change to speed up or slow down */
+  color:"yellow";
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+
+
  .greeting {
     margin-top: clamp(40px,7%,220px);
     margin-left: 15px ;
     font-weight: 600;
     /* margin-bottom: 0.8em; */
-    font-family: tiempos, sans-serif;
+    font-family: avenir;
     letter-spacing: 0.2em;
     font-size: 35px;
 } 
@@ -45,7 +70,8 @@ body{
     /* margin-top: clamp(40px,10%,220px); */
     font-size: 30px;
     width: max-content;
-    font-family: var(--font-content);
+    font-family: 'Manrope', sans-serif;
+
     text-transform: uppercase;
     position: relative;
     color:var(--color-neon);
@@ -81,6 +107,8 @@ body{
     }
 }
 .intro{
+    font-family: 'Manrope', sans-serif;
+
     font-size: 26px;    
     margin-left: 15px;
 }
@@ -197,6 +225,7 @@ margin-top: 10px;
     display: flex;
     justify-content: center;
     font-size: 32px;
+    font-weight: 700;
     margin-top: 5px;
     margin-bottom: 20px;
     font-family: var(--font-head);
@@ -209,7 +238,7 @@ margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     overflow-wrap: break-word;
-    padding:10px 20px;
+    padding:10px 10px;
 }
 
 .projects:hover{
@@ -236,13 +265,13 @@ transition: .5s ease;
     margin-right: 10px;
     margin-bottom: 10px;
     color:/* #39FF14*/var(--color-neon);
-    border-radius: 0.25em;
+    border-radius: 0.8em;
     text-shadow: 
-   0 0 0.125em hsl(0 0% 100% / 0.4), 
-    0 0 0.35em currentColor ;
-    box-shadow: inset 0 0 0.5em 0 var(--color-neon)
+   0 0 0.1em hsl(0 0% 100% / 0.4), 
+    0 0 0.1em currentColor ;
+    box-shadow: inset 0 0 0.1em 0 var(--color-neon)
     ,
-    0 0 0.5em 0 var(--color-neon)
+    0 0 0.1em 0 var(--color-neon)
      ;
      position: relative;
 }

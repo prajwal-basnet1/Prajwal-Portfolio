@@ -52,12 +52,12 @@ img {
     align-self: flex-start;
     padding: 0.2em .75em;
     border-radius: 1em;
-    margin-left: 15px;
     font-size: .75rem;
     border: 2px solid #8F00F1;
     display:inline;
     background-color: #8F00F1;
     color:#fafafa;
+    margin-right: 15px;
 }
 
 .content{

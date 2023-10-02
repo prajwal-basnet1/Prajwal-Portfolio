@@ -23,14 +23,14 @@ if ( page==="john-wooden.html") {
 
     //The code below will show READ THIS NEXT for john wooden blog.
 
-    fetch("/scripts/readmore/readmore.min.html")
+    fetch("/scripts/readmore/readmore.html")
     .then(res=>res.text())
     .then(data=>{
         let parser=new DOMParser()
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
         if(content.children[5].style.display=="none" || content.children[3].style.display=="none") {
-            content.children[2].style.display="block"
+            content.children[6].style.display="block"
             content.children[5].style.display="block"
         }
         const container=document.getElementById('next-read').appendChild(content)
@@ -39,14 +39,14 @@ if ( page==="john-wooden.html") {
 
 if ( page==="ntc.html") {
     //The code below will show READ THIS NEXT for Ntc analysis blog.
-    fetch("/scripts/readmore/readmore.min.html")
+    fetch("/scripts/readmore/readmore.html")
     .then(res=>res.text())
     .then(data=>{
         let parser=new DOMParser()
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
         if(content.children[5].style.display=="none" || content.children[1].style.display=="none") {
-            content.children[5].style.display="block"
+            content.children[6].style.display="block"
             content.children[1].style.display="block"
         }
 
@@ -56,7 +56,7 @@ if ( page==="ntc.html") {
 
 
 if (page==="vimessentials.html") {
-    fetch("/scripts/readmore/readmore.min.html")
+    fetch("/scripts/readmore/readmore.html")
     .then(res=>res.text())
     .then(data=>{
         let parser=new DOMParser()
@@ -74,7 +74,7 @@ if (page==="vimessentials.html") {
 
 if ( page==="docker.html") {
     //The code below will show READ THIS NEXT for Ntc analysis blog.
-    fetch("/scripts/readmore/readmore.min.html")
+    fetch("/scripts/readmore/readmore.html")
     .then(res=>res.text())
     .then(data=>{
         let parser=new DOMParser()
@@ -88,9 +88,26 @@ if ( page==="docker.html") {
     })
 }
 
+
+if ( page==="decision-making.html") {
+    //The code below will show READ THIS NEXT for Ntc analysis blog.
+    fetch("/scripts/readmore/readmore.html")
+    .then(res=>res.text())
+    .then(data=>{
+        let parser=new DOMParser()
+        let doc=parser.parseFromString(data,"text/html")
+        let content=doc.getElementById("read-more")
+        if(content.children[3].style.display=="none" || content.children[5].style.display=="none") {
+            content.children[5].style.display="block"
+            content.children[1].style.display="block"
+        }
+        const container=document.getElementById('next-read').appendChild(content)
+    })
+}
+
 if ( page==="mungerism.html") {
     //The code below will show READ THIS NEXT for Ntc analysis blog.
-    fetch("/scripts/readmore/readmore.min.html")
+    fetch("/scripts/readmore/readmore.html")
     .then(res=>res.text())
     .then(data=>{
         let parser=new DOMParser()
@@ -98,7 +115,7 @@ if ( page==="mungerism.html") {
         let content=doc.getElementById("read-more")
         if(content.children[1].style.display=="none" || content.children[2].style.display=="none") {
             content.children[1].style.display="block"
-            content.children[2].style.display="block"
+            content.children[6].style.display="block"
         }
         const container=document.getElementById('next-read').appendChild(content)
     })
@@ -149,5 +166,3 @@ fetch("/scripts/navbar/navbar.min.html")
     let body=doc.getElementsByTagName('body')[0].outerHTML
     nav.innerHTML+=body
 })
-
-

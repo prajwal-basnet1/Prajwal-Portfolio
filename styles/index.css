@@ -269,11 +269,7 @@ transition: .5s ease;
     margin-right: 10px;
     margin-bottom: 10px;
     color:/* #39FF14*/var(--color-neon);
-<<<<<<< HEAD
     border-radius: 0.8em;
-=======
-    border-radius: 0.75em;
->>>>>>> origin
     text-shadow: 
    0 0 0.1em hsl(0 0% 100% / 0.4), 
     0 0 0.1em currentColor ;

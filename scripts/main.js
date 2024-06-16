@@ -120,6 +120,23 @@ if ( page==="mungerism.html") {
         const container=document.getElementById('next-read').appendChild(content)
     })
 }
+
+
+if ( page==="uranium.html") {
+    //The code below will show READ THIS NEXT for Ntc analysis blog.
+    fetch("/scripts/readmore/readmore.html")
+    .then(res=>res.text())
+    .then(data=>{
+        let parser=new DOMParser()
+        let doc=parser.parseFromString(data,"text/html")
+        let content=doc.getElementById("read-more")
+        if(content.children[1].style.display=="none" || content.children[2].style.display=="none") {
+            content.children[1].style.display="block"
+            content.children[5].style.display="block"
+        }
+        const container=document.getElementById('next-read').appendChild(content)
+    })
+}
 //The code below is used for navbar and newsletter for whole blog folder.
 
 const nav=document.querySelector(".navbar-container")

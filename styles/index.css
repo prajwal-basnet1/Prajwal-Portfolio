@@ -131,7 +131,8 @@ body{
     margin-left: auto;
     margin-right: auto;
     overflow-wrap: break-word;
-    font-family: var(--font-content)
+    font-family: var(--font-content);
+    border-radius: 15px 15px 0px 0px;
 }
 .terminal-intro-container{
     padding-bottom: 20px;
@@ -139,6 +140,7 @@ body{
 }
 .terminal-topbar{
     height: clamp(20px,30px,50px);
+    border-radius: 15px 15px 0px 0px;
     background-color: #D5D5D5;
     padding-top:2%;
 }
@@ -225,11 +227,7 @@ margin-top: 10px;
     display: flex;
     justify-content: center;
     font-size: 32px;
-<<<<<<< HEAD
     font-weight: 700;
-=======
-    font-weight:700;
->>>>>>> origin
     margin-top: 5px;
     margin-bottom: 20px;
     font-family: var(--font-head);

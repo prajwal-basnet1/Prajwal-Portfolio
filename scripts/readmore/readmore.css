@@ -6,6 +6,9 @@
     width: 320px;
     height: 250px;
 }
+.card{
+    width: 60%;
+}
 .card__body{
     color:black;
 }

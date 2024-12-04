@@ -98,7 +98,7 @@ if ( page==="decision-making.html") {
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
         if(content.children[3].style.display=="none" || content.children[5].style.display=="none") {
-            content.children[7].style.display="block"
+            content.children[6].style.display="block"
             content.children[5].style.display="block"
         }
         const container=document.getElementById('next-read').appendChild(content)
@@ -114,7 +114,7 @@ if ( page==="mungerism.html") {
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
         if(content.children[1].style.display=="none" || content.children[2].style.display=="none") {
-            content.children[1].style.display="block"
+            content.children[8].style.display="block"
             content.children[6].style.display="block"
         }
         const container=document.getElementById('next-read').appendChild(content)
@@ -131,7 +131,7 @@ if ( page==="uranium.html") {
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
         if(content.children[1].style.display=="none" || content.children[2].style.display=="none") {
-            content.children[1].style.display="block"
+            content.children[6].style.display="block"
             content.children[5].style.display="block"
         }
         const container=document.getElementById('next-read').appendChild(content)
@@ -149,8 +149,8 @@ if ( page==="mental_model_1.html") {
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
         if(content.children[1].style.display=="none" || content.children[2].style.display=="none") {
-            content.children[1].style.display="block"
-            content.children[5].style.display="block"
+            content.children[4].style.display="block"
+            content.children[8].style.display="block"
         }
         const container=document.getElementById('next-read').appendChild(content)
     })
@@ -166,8 +166,8 @@ if ( page==="healthcare.html") {
         let doc=parser.parseFromString(data,"text/html")
         let content=doc.getElementById("read-more")
         if(content.children[1].style.display=="none" || content.children[2].style.display=="none") {
-            content.children[1].style.display="block"
-            content.children[7].style.display="block"
+            content.children[6].style.display="block"
+            content.children[8].style.display="block"
         }
         const container=document.getElementById('next-read').appendChild(content)
     })

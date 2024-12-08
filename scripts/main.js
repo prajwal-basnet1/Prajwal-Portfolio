@@ -193,14 +193,14 @@ fetch("/scripts/navbar/navbar.min.html")
         blog.style.textDecoration='line-through' 
         blog.style.color='#8f00f1'
         //Adding newsletter at bottom
-        fetch("/scripts/newsletter/news_letter.min.html")
-        .then(res=>res.text())
-        .then(data=>{
-            let parser= new DOMParser()
-            let doc=parser.parseFromString(data,"text/html")
-            let subscribe=doc.getElementById("subscribe")
-            const newsLetter=document.getElementById("newsletter").appendChild(subscribe)
-        })
+        // fetch("/scripts/newsletter/news_letter.min.html")
+        // .then(res=>res.text())
+        // .then(data=>{
+        //     let parser= new DOMParser()
+        //     let doc=parser.parseFromString(data,"text/html")
+        //     let subscribe=doc.getElementById("subscribe")
+        //     const newsLetter=document.getElementById("newsletter").appendChild(subscribe)
+        // })
 
 
     }

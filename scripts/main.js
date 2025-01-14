@@ -132,7 +132,7 @@ if ( page==="uranium.html") {
         let content=doc.getElementById("read-more")
         if(content.children[1].style.display=="none" || content.children[2].style.display=="none") {
             content.children[6].style.display="block"
-            content.children[5].style.display="block"
+            content.children[10].style.display="block"
         }
         const container=document.getElementById('next-read').appendChild(content)
     })
@@ -168,6 +168,23 @@ if ( page==="healthcare.html") {
         if(content.children[1].style.display=="none" || content.children[2].style.display=="none") {
             content.children[4].style.display="block"
             content.children[6].style.display="block"
+        }
+        const container=document.getElementById('next-read').appendChild(content)
+    })
+}
+
+
+if ( page==="renaissance.html") {
+    //The code below will show READ THIS NEXT for Ntc analysis blog.
+    fetch("/scripts/readmore/readmore.html")
+    .then(res=>res.text())
+    .then(data=>{
+        let parser=new DOMParser()
+        let doc=parser.parseFromString(data,"text/html")
+        let content=doc.getElementById("read-more")
+        if(content.children[1].style.display=="none" || content.children[2].style.display=="none") {
+            content.children[6].style.display="block"
+            content.children[9].style.display="block"
         }
         const container=document.getElementById('next-read').appendChild(content)
     })
